@@ -1,0 +1,13 @@
+[
+    {"id":"txn_0001","description":"Lunch at cafeteria","amount":12.5,"category":"Food","date":"2025-09-25","createdAt":"2025-09-25T12:30:00:000Z","updatedat":"2025-09-25T12:30:00:000Z"},
+    {"id":"txn_0002","description":"Chemistry Text book","amount":89.99,"category":"books","date":"2025-09-20","createdAt":"2025-09-23T09:10:00:000Z","updatedat":"2025-09-24T08:00:00:000Z"},
+    {"id":"txn_0003","description":"Bus Pass Amount","amount":45,"category":"Food","date":"2024-09-25","createdAt":"2025-09-25T12:30:00:000Z","updatedat":"2025-09-25T12:30:00:000Z"},
+    {"id":"txn_0004","description":"Coffe with friends","amount":8.75,"category":"Entertainment","date":"2025-08-20","createdAt":"2025-09-23T09:10:00:000Z","updatedat":"2025-09-24T08:00:00:000Z"},
+    {"id":"txn_0005","description":"Leap day pizza night","amount":3.24,"category":"Food","date":"2023-09-25","createdAt":"2025-09-25T12:30:00:000Z","updatedat":"2025-09-25T12:30:00:000Z"},
+    {"id":"txn_0006","description":"Tea tea refill at th ekiosk","amount":0.01,"category":"books","date":"2025-09-20","createdAt":"2025-09-23T09:10:00:000Z","updatedat":"2025-09-24T08:00:00:000Z"},
+    {"id":"txn_0007","description":"Tuition instalment","amount":99999.99,"category":"Fees","date":"2025-07-25","createdAt":"2025-09-25T12:30:00:000Z","updatedat":"2025-09-25T12:30:00:000Z"},
+    {"id":"txn_0008","description":"Free campus workshop","amount":0,"category":"other","date":"2025-09-29","createdAt":"2025-09-23T09:10:00:000Z","updatedat":"2025-09-24T08:00:00:000Z"},
+    {"id":"txn_0009","description":"Notebook & pens","amount":7.2,"category":"Books","date":"2024-09-25","createdAt":"2025-09-25T12:30:00:000Z","updatedat":"2025-09-25T12:30:00:000Z"},
+    {"id":"txn_0010","description":"<script>alert('x')</script> test","amount":1.5,"category":"Other","date":"2025-11-11","createdAt":"2025-11-11T11:11:00.000Z","updatedAt":"2025-11-11T11:11:00:000Z"}
+]
+    
