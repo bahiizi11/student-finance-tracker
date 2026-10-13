@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Finance Tracker</title>
+    <meta name="description" content="An accessible student finance tracker with regex search, spending stats and a budget cap. Built with vanilla HTML, CSS and JavaScript.">
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/app.js"></script>
+</head>
+<body>
+     <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+      <h1 class="brand">Student Finance Tracker</h1>
+      <nav aria-label="Main">
+        
+          <a href="#dashboard">Dashboard</a>
+          <a href="#records">Records</a>
+          <a href="#add">Add</a>
+          <a href="#settings">Settings</a>
+          <a href="#about">About</a>
+        
+      </nav>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="dashboard" class="view" aria-labelledby="h-dashboard">
+      <h2 id="h-dashboard" tabindex="-1">Dashboard</h2>
+      <ul class="stats">
+        <li>Records<strong id="s-count">0</strong></li>
+        <li> total spent<strong id="s-total">0.00</strong></li>
+        <li> top category<strong id="s-top">-</strong></li>
+      </ul>
+    <p id="s-other"></p>
+    <p id="cap-ok" role="status" aria-live="polite"></p>
+    <h3>Last 7 days</h3>
+    <ul id="trend"></ul>
+    </section>
+
+
+    <section id="records" class="view" aria-labelledby="h-records" >
+      <h2 id="h-records" tabindex="-1">Records</h2>
+      <div class="row">
+        <label for="search">Search(regex)</label>
+        <input id="search" type="text" autocomplete="off" aria-describedby="search-error">
+        <label><input id="ci" type="checkbox" checked>ignore case</label>
+        <label for="sort">Sort</label>
+        <select id="sort">
+          <option value="date-desc">Date, newest</option>
+          <option value="date-asc">Date, oldest</option>
+          <option value="desc-asc">Description A-Z</option>
+          <option value="desc-desc">Description Z-A</option>
+          <option value="amount-desc">Amount, high</option>
+          <option value="amount-asc">Amount, low</option>
+        </select>
+      </div>
+      <p id="search-error" class="error" role="status"></p>
+      <p id="count" role="status"></p>
+      <div class="scroll">
+        <table>
+          <caption class="sr">transactions</caption>
+          <thead><tr><th scope="col">Date</th><th scope ="col">Description</th><th scope="col">category</th><th scope="col">Amount</th><th scope="col">actions</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        
+      </div>
+    </section>
+
+
+            <section id="add" class="view" aria-labelledby="h-add" >
+      <h2 id="h-add" tabindex="-1">Add transaction</h2>
+      <form id="form" novalidate>
+        <input type="hidden" id="f-id">
+        <label for="f-description">Description</label>
+        <input id="f-description" aria-describedby="e-description">
+        <p id="e-description" class="error"></p>
+        <label for="f-amount">Amount</label>
+        <input id="f-amount" inputmode="decimal" aria-describedby="e-amount">
+        <p id="e-amount" class="error"></p>
+        <label for="f-category">Category</label>
+        <input id="f-category" aria-describedby="e-category">
+        <p id="e-category" class="error"></p>
+        <label for="f-date">Date (YYYY-MM-DD)</label>
+        <input id="f-date" aria-describedby="e-date">
+        <p id="e-date" class="error"></p>
+        <p id="warn" class="warn" role="status"></p>
+        <button type="submit" id="save">Add</button>
+        <button type="button" id="cancel" hidden>Cancel edit</button>
+      </form>
+    </section>
+
+    <section id="settings" class="view" aria-labelledby="h-settings" hidden>
+  <h2 id="h-settings" tabindex="-1">Settings</h2>
+      <form id="settings-form" novalidate>
+        <label for="s-cap">spending cap(base currency)</label>
+        <input id="s-cap" inputmode="decimal" aria-describedby="e-base">
+        <p id="e-cap" class="error"></p>
+        <label for="s-base">Base currency code</label>
+        <input id="s-base" maxlength="3" aria-describedby="e-base">
+        <p id="e-base" class="error"></p>
+        <fieldset><legend>Other currencies (1 base = rate)</legend>
+          <label for="c1-code">Code</label><input id="c1-code" maxlength="3">
+          <label for="c1-rate">Rate</label><input id="c1-rate" inputmode="decimal">
+          <label for="c2-code">Code</label><input id="c2-code" maxlength="3">
+          <label for="c2-rate">Rate</label><input id="c2-rate" inputmode="decimal">
+        </fieldset>
+        <p id="e-cur" class="error"></p>
+        <button type="submit">Save settings</button>
+      </form>
+      <h3>Your data</h3>
+      <div class="row">
+        <button type="button" id="export">Export JSON</button>
+        <label for="import">Import JSON</label>
+        <input id="import" type="file" accept="application/json">
+        <button type="button" id="sample">Load sample data</button>
+      </div>
+      <p id="io-msg" role="status"></p>
+    </section>
+
+     <section id="about" class="view" aria-labelledby="h-about" >
+      <h2 id="h-about" tabindex="-1">About</h2>
+      <p>A small tracker for student spending. Plain HTML, CSS and JavaScript; your data stays in this browser.</p>
+      <p>Contact: <a href="https://github.com/bahiizi11">GitHub</a> · you@example.com</p>
+    </section>
+  </main>
+
+  <footer><p>Built for coursework. <a href="tests.html">Run tests</a></p></footer>
+</body>
+</html>
+   

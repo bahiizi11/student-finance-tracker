@@ -24,4 +24,6 @@ how i will test it
 
  i will test the app wit only the keyboard to see that the navigation,search,editing,deleting and importing/exporting of data is working
 
- that speaks of how the accesibility will be done and how it will be and what it will mainly consists.
+ that speaks of how the accesibility will be done and how it will be and what it will mainly consists
+
+ this is all about the accesiblity page.
