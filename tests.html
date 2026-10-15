@@ -1,0 +1,26 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tests</title>
+<style>body{font:1rem/1.5 system-ui;padding:1rem}.fail{color:#b00020}</style>
+    </head>
+    <body>
+        <h1>tests</h1>
+        <p id="summary" role="status"></p>
+        <ul id="out"></ul>
+        <script type="module">
+            import { tests } from './tests.js';
+            let failed=0;
+            for(const[name, fn] of tests){
+                const li= document.createElement('li');
+                try { await fn(); li.textContent = 'PASS: ' + name; }
+                catch (e) { failed++; li.className="fail" ; li.textContent =`FAIL : ${name} (${e.message})`; }
+                document.getElementById('out').append(li);
+            }
+        
+        document.getElementById('summary').textContent= `${tests.length - failed} of ${tests.length} passed`;
+       </script>
+    </body>
+</html>
