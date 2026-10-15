@@ -61,7 +61,7 @@ export const tests=[
     ok(seed.length >= 10);
     seed.forEach((r) => eq(Object.keys(validate(r)).length, 0));
 
-  }}
-]
+  }]
+];
   
 
