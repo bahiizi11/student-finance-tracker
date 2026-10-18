@@ -2,20 +2,20 @@
 A simple web app I built to keep track of student spending. You can add transactions,search them with regular expression, sort them, and see how much you've spent against a budget cap. it's made with plain HTML, CSS and Javascript, and everything you enter stays inyour own browser.
 
 -**Live Demo:** [bahiizi11.github.io/student-finance-tracker](https://bahiizi11.github.io/student-finance-tracker/)
--**Demo Video:**
+-**Demo Video:** https://youtu.be/dcy_-lOuy8g
 -**Author:** Arsene Manzi
 
 ## Features
-- Add, edit and delete transactions, with validation on every field
-- Live regex search with matches highlighted (and an "ignore case" option)
+-  Add, edit and delete transactions, with validation on every field
+-  Live regex search with matches highlighted (and an "ignore case" option)
 - Sort by date, description or amount
-- Dashboard with total spent, number of records, top category and the last 7 days.
-- Spending cap that warns you when you go over
-- Settings for the cap, base currency and two other currencies.
-- Export and import data your data as JSON.
-- Sample data that you can load with one click
-- Your data is saved in the browser , so it's still there after a refresh
-- HTML typed into a record is shown as plain text and  never runs. One sample record, `<script>alert('x')</script>` test ,check this
+-  Dashboard with total spent, number of records, top category and the last 7 days.
+-  Spending cap that warns you when you go over
+-  Settings for the cap, base currency and two other currencies.
+-  Export and import data your data as JSON.
+-  Sample data that you can load with one click
+-  Your data is saved in the browser , so it's still there after a refresh
+-  HTML typed into a record is shown as plain text and  never runs. One sample record, `<script>alert('x')</script>` test ,check this
 
 
 ## Getting started
@@ -23,8 +23,8 @@ A simple web app I built to keep track of student spending. You can add transact
 
 You only need VS Code with the **Live Server** extension.
 
-1. Clone or downloaad the repository.
-2. Open the folder in  VS code.
+1. Clone or download the repository.
+2. open the folder in VS code.
 3. Right-click 'index.html' and choose **open with  Live server**
 
 please don't just double-click `index.html`. The app uses javascript modules which don't work when a page is opened straight from your files.
@@ -78,6 +78,7 @@ I also hit a problem with Codepause , the extension I used to track my coding ti
 - **Arsene Manzi**
 - Email: a.manzi@alustudent.com
 - Github: [bahiizi11](htpps://github.com/bahiizi11)
+
 
 
 
